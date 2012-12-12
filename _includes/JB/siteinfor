@@ -1,0 +1,10 @@
+<small>
+	Thanks :
+	<a target="blank" href="http://pages.github.com/">GitHub Pages</a>
+	--
+	<a target="blank" href="https://github.com/sodabrew/theme-dinky">Dinky theme</a>
+	--
+	<a target="blank" href="http://jekyllbootstrap.com/">Jekyll Bootstrap</a>
+</small>
+<br> <em>&copy 2012 {{site.author.name}}</em>
+<br> <strong>[Love Who You Like,Do What You Like]</strong>
