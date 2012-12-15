@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 博客 On GitHub
-description: "博客创建成功"
+description: "经过将近一个星期的学习和折腾，终于利用Jekyll+Git+Github组合成功搭建了本博客，发篇博文纪念一下。勉励自己坚持写下去，积累以后就是收获!"
 category: [others]
 tags: [折腾]
 ---
