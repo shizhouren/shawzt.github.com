@@ -1,0 +1,13 @@
+---
+layout: page
+title: 所有文章 
+header: Pages
+group: navigation
+comments: false
+---
+{% include JB/setup %}
+
+<ul>
+{% assign posts_all = site.posts %}
+{% include JB/article_list %}
+</ul>

@@ -318,18 +318,10 @@ section {
 
 footer {
   width:960px;
+  height: 80px;
   float:left;
   position:fixed;
-  bottom:0px;
-}
-
-footer div.tools {
-  margin-left:50px;
-}
-
-footer div.infor {
-  margin-left:360px;
-  margin-top:-50px;
+  bottom:60px;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -417,4 +409,55 @@ footer div.infor {
     font-size:12pt;
     color:#444;
   }
+}
+
+/*以下为自定义样式*/
+
+/*导航中的“我”*/
+#me {
+  width: 20px;
+}
+
+/*最近博文列表*/
+#title {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  font-weight: 250;
+}
+
+#date {
+  float: right;
+  margin-left: 10px;
+  margin-right: 5px; 
+  font-weight: 180;
+}
+
+#content {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: chocolate;
+  background-color: white;
+}
+
+#desc {
+  color: #333333;
+  font-weight: normal;
+}
+
+#view {
+  text-align: right;
+  margin-right: 5px;
+  color: #0088CC;
+  font-weight: 200;
+}
+
+#line {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+#more {
+  float: right;
+  padding-left: 60px;
+  padding-right: 60px;
 }

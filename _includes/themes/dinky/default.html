@@ -15,6 +15,8 @@
   <![endif]-->
 </head>
 <body>
+  <a target="blank" href="http://github.com/shawzt/shawzt.github.com">
+    <img style="position: absolute; top: 0px; right: 0; border: 0;" src="/assets/images/forkme.png" alt="Fork me on GitHub"></a>
   <div class="wrapper">
     <header>
       <h1 class="header">
@@ -22,9 +24,18 @@
       </h1>
       <p class="header">{{ site.tagline }}</p>
       <ul>
-        {% assign pages_list = site.pages %}
-          {% assign group = 'navigation' %}
-          {% include JB/pages_list %}
+        <li class="active">
+          <a href="{{ site.JB.article_path }}" class="active">文章</a>
+        </li>
+        <li class="active">
+          <a href="{{ site.JB.categories_path }}" class="active">分类</a>
+        </li>
+        <li class="active">
+          <a href="{{ site.JB.tags_path }}" class="active">标签</a>
+        </li>
+        <li class="active">
+          <a href="{{ site.JB.archive_path }}" class="active">归档</a>
+        </li>
       </ul>
       {% if site.ads.google %}
       <div class="misc ad">
@@ -41,35 +52,32 @@
       <div class="misc vcard">
         <h4>about</h4>
         <ul>
+          <li id="me">
+            <a href="{{ HOME_PATH }}about/me.html">我</a>
+          </li>
           {% if site.author.github %}
           <li class="github">
-            <a href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a>
+            <a target="blank" href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a>
           </li>
           {% endif %}
-        </ul>
-      </div>
-      <div class="misc vcard">
-        <h4>contact</h4>
-        <ul>
           {% if site.author.email %}
           <li class="contact">
             <address>
-              <span class="author fn n">{{ site.author.name }}</span>
-              @
-              <span class="fn email">{{ site.author.email }}</span>
+              <span class="author fn n">{{ site.author.name }}@{{ site.author.email }}</span>
             </address>
           </li>
           {% endif %}
         </ul>
       </div>
-      <!-- misc -->{% endif %}</header>
+      {% endif %}
+    </header>
 
     <section>{{ content }}</section>
 
     <footer>
-      <div class="tools">{% include JB/analytics %}</div>
-      <div class="infor">
-        <p align="center">{% include JB/siteinfor %}</p>
+      <div>
+        {% include JB/analytics %}
+        <p>{% include JB/siteinfor %}</p>
       </div>
     </footer>
   </div>
