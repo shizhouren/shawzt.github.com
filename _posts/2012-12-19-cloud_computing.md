@@ -39,4 +39,5 @@ tags: [云计算]
 	- 混合云[Hybrid Cloud]
 		结合公用云和私有云，使用者将非关键部分外包，置于公用云上处理，
 		将关键服务和资料放在私有云内。
+说明：信息来自互联网，图片来源于wikipedia。
 [1]:http://zh.wikipedia.org/wiki/%E4%BA%91%E8%AE%A1%E7%AE%97
