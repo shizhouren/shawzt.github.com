@@ -16,6 +16,10 @@ __*一.创建GitHub账户及项目库*__
 	2. 登录GitHub后，创建一个Repository：UserName.github.com，
 		(注意：UserName替换成你在GitHub上的用户名)，见图2；
 	3. 该阶段工作完成！
+图1：  
+![注册GitHub账号](/assets/images/github.png)  
+图2：  
+![添加SSH Key](/assets/images/createRepo.png)  
 __*二.Git客户端安装及其配置*__
 
 	1. 在Linux系统上，可以使用apt-get install git-core安装；
