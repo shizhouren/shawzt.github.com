@@ -7,5 +7,5 @@ analytics: true
 ---
 
 {% assign posts_all = site.posts %}
-{% assign count = 5 %}
+{% assign count = 3 %}
 {% include custom/post_all %}

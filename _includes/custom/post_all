@@ -41,8 +41,4 @@ Usage:
 </dl>
 {% endif %}
   {% endfor %}
-  {% if posts_all.size > count %}
-<hr id="line"/>
-<a class="btn btn-primary" id="more" href="post_all.html">查看更多</a>
-{% endif %}
 {% assign posts_all = nil %}
