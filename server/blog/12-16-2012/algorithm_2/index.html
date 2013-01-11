@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="author" content="shawzt" />
+  <title>算法_平面划分</title>
+
+  <link rel="stylesheet" href="/assets/themes/dinky/css/styles.css">
+  <link rel="stylesheet" href="/assets/themes/dinky/css/pygment_trac.css">
+  <link rel="stylesheet" href="/assets/themes/dinky/css/prettify.css">
+  <script src="/assets/themes/dinky/js/prettify.js"></script>
+  <script src="/assets/themes/dinky/js/scale.fix.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body onload="prettyPrint()">
+  <a target="blank" href="http://github.com/shawzt/shawzt.github.com">
+    <img style="position: absolute; top: 0px; right: 0; border: 0;" src="/assets/images/forkme.png" alt="Fork me on GitHub"></a>
+  <div class="wrapper">
+    <header>
+      <h1 class="header">
+        <a href="/">Tech & Life</a>
+      </h1>
+      <p class="header">Log Something</p>
+      <ul>
+        <li class="active">
+          <a href="/article.html" class="active">文章</a>
+        </li>
+        <li class="active">
+          <a href="/categories.html" class="active">分类</a>
+        </li>
+        <li class="active">
+          <a href="/tags.html" class="active">标签</a>
+        </li>
+        <li class="active">
+          <a href="/archive.html" class="active">归档</a>
+        </li>
+      </ul>
+      
+          
+      <div class="misc vcard">
+        <h4>about</h4>
+        <ul>
+          <li id="me">
+            <a href="/about/me.html">我</a>
+          </li>
+          
+          <li class="github">
+            <a target="blank" href="http://github.com/shawzt/" rel="me">github.com/shawzt</a>
+          </li>
+          
+          
+          <li class="contact">
+            <address>
+              <span class="author fn n">shawzt@gmail.com</span>
+            </address>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </header>
+
+    <section>
+<section>
+	<h1> <font face="华文楷体">算法_平面划分</font>
+	</h1>
+	<p>在程序设计竞赛中，很多的题目是考查递归、递推算法的分析与设计能力，其中有些会涉及几何方面。现总结一下我所做过的该类型题目：</p>
+
+<h3>直线划分平面</h3>
+
+<p><strong>1. 描述</strong> <br/>
+一条直线可以讲平面划分为2个部分，两条则可以分成4个部分，问：n条直线最多可将平面划分成几个部分？ <br/>
+<strong>2. 解析</strong> <br/>
+<img src="/assets/images/line_div_plane.png" alt="直线划分平面" />  <br/>
+通过上图分析，可以得出递推公式：f(n)=f(n-1)+n。  <br/>
+<strong>3. 代码</strong></p>
+
+<pre class="prettyprint">
+    <code class="language-cpp">
+//递归实现
+int divByLine(int num)
+{
+    if(num == 1)
+        return 2;
+    else
+        return divByLine(num-1)+num;
+}
+//递推实现
+int divByLine(int num)
+{
+    int* data = new int[num+1];
+    for(int i=0; i<=num; i++)
+    {
+        data[i] = 0;
+    }
+    data[1] = 2;
+    for(int i=2; i<=num; i++)
+    {
+        data[i] = data[i-1]+i;
+    }
+    return data[num];
+}
+    </code></pre>
+
+
+<h3>折线划分平面</h3>
+
+<p><strong>1. 描述</strong> <br/>
+一条折线可以讲平面划分为2个部分，两条则可以分成7个部分，问：n条折线最多可将平面划分成几个部分？（折线样式如下图所示）<br/>
+<strong>2. 解析</strong> <br/>
+<img src="/assets/images/polyline_div_plane.png" alt="折线划分平面" />  <br/>
+通过上图分析，可以得出递推公式：f(n)=f(n-1)+4*(n-1)+1。  <br/>
+<strong>3. 代码</strong></p>
+
+<pre class="prettyprint">
+    <code class="language-cpp">
+//递归实现
+int divByPolyLine(int num)
+{
+    if(num == 1)
+        return 2;
+    else
+        return divByPolyLine(num-1)+4*(num-1)+1;
+}
+//递推实现
+int divByPolyLine(int num)
+{
+    int* data = new int[num+1];
+    for(int i=0; i<=num; i++)
+    {
+        data[i] = 0;
+    }
+    data[1] = 2;
+    for(int i=2; i<=num; i++)
+    {
+        data[i] = data[i-1]+4*(i-1)+1;
+    }
+    return data[num];
+}
+    </code></pre>
+
+
+<h3>封闭曲线划分平面</h3>
+
+<p><strong>1. 描述</strong> <br/>
+一条封闭曲线可以讲平面划分为2个部分，两条则可以分成4个部分，问：n条封闭曲线最多可将平面划分成几个部分？ <br/>
+<strong>2. 解析</strong> <br/>
+<img src="/assets/images/curve_div_plane.png" alt="封闭曲线划分平面" />
+通过上图分析，可以得出递推公式：f(n)=f(n-1)+2*(n-1)。<br/>
+<strong>3. 代码</strong></p>
+
+<pre class="prettyprint">
+    <code class="language-cpp">
+//递归实现
+int divByCurve(int num)
+{
+    if(num == 1)
+        return 2;
+    else
+        return divByCurve(num-1)+2*(num-1);
+}
+//递推实现
+int divByCurve(int num)
+{
+    int* data = new int[num+1];
+    for(int i=0; i<=num; i++)
+    {
+        data[i] = 0;
+    }
+    data[1] = 2;
+    for(int i=2; i<=num; i++)
+    {
+        data[i] = data[i-1]+2*(i-1);
+    }
+    return data[num];
+}
+    </code></pre>
+
+
+
+  
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_developer = 1;//Use this variable to get around the test of Disqus service.1 for on;0 for off
+            var disqus_shortname = 'logsomething';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+<noscript>
+	Please enable JavaScript to view the
+	<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com" class="dsq-brlink">
+	comments powered by
+	<span class="logo-disqus">Disqus</span>
+</a>
+
+
+
+</section>
+</section>
+
+    <footer>
+      <div>
+        
+
+
+  <a title="Web访问实时统计" target="blank" href="http://getclicky.com/100558210">
+  <img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" />
+</a>
+<script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100558210);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );})();
+              </script>
+<noscript>
+  <p>
+    <img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100558210ns.gif" />
+  </p>
+</noscript>
+
+
+
+        <p><small>
+	Thanks :
+	<a target="blank" href="http://pages.github.com/">GitHub</a>
+	-
+	<a target="blank" href="https://github.com/sodabrew/theme-dinky">Dinky theme</a>
+	-
+	<a target="blank" href="http://jekyllbootstrap.com/">Jekyll</a>
+</small>
+<br> <em>&copy 2012 shawzt</em></p>
+      </div>
+    </footer>
+  </div>
+  <!--[if !IE]>
+  <script>fixScale(document);</script>
+  <!--<![endif]-->
+</body>
+</html>
