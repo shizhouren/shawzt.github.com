@@ -2,7 +2,7 @@
 layout: post
 title: "Ubuntu下Sublime Text2的中文输入解决方法"
 description: "Sublime Text2是一款很迷人的编辑器——界面简洁漂亮、插件丰富好用。但是有点遗憾的是在Ubuntu下无法正常输入中文，今天遇到此问题确实令人抓狂。于是在网上寻求解决方案，有许多方法，这里介绍比较简便的解决方案——InputHelper"
-category: [软件]
+categories: [软件]
 tags: [Sublime Text,InputHelper]
 ---
 还没有Sublime Text2？<a target="blank" href="http://www.sublimetext.com/2">点击这里</a>

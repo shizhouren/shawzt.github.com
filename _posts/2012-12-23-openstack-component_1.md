@@ -2,7 +2,7 @@
 layout: post
 title: "OpenStack组件说明之一"
 description: "OpenStack组件——Nova、Swift简介"
-category: [云计算]
+categories: [云计算]
 tags: [OpenStack]
 ---
 __1. 计算服务——Nova__	
