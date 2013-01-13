@@ -2,7 +2,7 @@
 layout: post
 title: "云计算——简介"
 description: "云计算是如今很火的技术名词，而且也已经逐渐地融入到我们日常生活中。那么什么是云计算？云计算又能干些什么？"
-categories: [云计算]
+category: 云计算
 tags: [云计算]
 ---
 

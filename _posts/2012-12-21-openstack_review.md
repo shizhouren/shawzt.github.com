@@ -2,7 +2,7 @@
 layout: post
 title: "OpenStack架构简介"
 description: "云计算包括三大服务：基础设施即服务（IaaS）；软件即服务（SaaS）；平台即服务（PaaS），而OpenStack正是IaaS系列中的优秀者。它是一套开源软件项目的综合体，使得任何人都可以自行建立、部署云平台并提供云计算服务。本文简要介绍OpenStack的架构"
-categories: [云计算]
+category: 云计算
 tags: [云计算,IaaS,OpenStack]
 ---
 云计算的相关概念介绍见我的
