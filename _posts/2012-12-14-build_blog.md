@@ -68,7 +68,7 @@ __*四.创建博客*__
 		cd目标位置；输入 jekyll --server
 		在浏览器中输入http://localhost:4000/可以预览你的博客了O(∩_∩)O~
 ###**资料**
-####No1. Git
+<h4 id="Git">No1. Git</h4>
 	1. <http://rogerdudler.github.com/git-guide/index.zh.html>
 	2. <http://git-scm.com/>
 	3. <https://github.com/progit/progit>
