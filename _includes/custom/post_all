@@ -29,7 +29,7 @@ Usage:
   {% endif %}
   <dt>
     <h4 id="title">{{ post.title }}</h4>
-    <span id="date">{{ post.date | date: "%m/%e %Y" }}</span>
+    <span id="date">{{ post.date | date: "%m/%d %Y" }}</span>
     <div id="content">
       <p id="desc">{{post.description}}</p>
       <div id="view">
