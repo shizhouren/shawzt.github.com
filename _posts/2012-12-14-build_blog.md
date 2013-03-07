@@ -2,7 +2,7 @@
 layout: post
 title: "利用Jekyll+Git+GitHub组合，创建自己的博客"
 description: "本文结合自己的实践，介绍如何利用Jekyll+Git+GitHub组合，创建一个真正属于自己的博客。该博客的搭建和使用需要一定的技术基础。"
-category: 随感
+category: 杂集
 tags: [折腾]
 ---
 

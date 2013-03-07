@@ -2,8 +2,8 @@
 layout: post
 title: "OpenStack组件说明之二"
 description: "OpenStack组件——Glance、Keystone、Horizon简介"
-category: 云计算
-tags: [OpenStack]
+category: 技术
+tags: [云计算,OpenStack]
 ---
 
 __3. 镜像服务——Glance__  

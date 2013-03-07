@@ -2,8 +2,8 @@
 layout: post
 title: "OpenStack组件说明之一"
 description: "OpenStack组件——Nova、Swift简介"
-category: 云计算
-tags: [OpenStack]
+category: 技术
+tags: [云计算,OpenStack]
 ---
 __1. 计算服务——Nova__	
 Nova是OpenStack的弹性控制器，OpenStack云实例生命期所需的各种动作都将由Nova支持和处理。这意味着Nova负责管理所创建的云平台的计算资源、网络、授权及测度。Nova本身并不提供任何虚拟能力，它使用libvirt API与虚拟机的宿主机进行交互。Nova通过Web服务API对外提供处理接口，而且这些接口与Amazon的Web服务接口是兼容的。	

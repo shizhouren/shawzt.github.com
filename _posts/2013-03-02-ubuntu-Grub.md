@@ -2,8 +2,8 @@
 layout: post
 title: "Ubuntu12.04 个性化配置"
 description: "Ubuntu是适合Linux初学者的系统。学习Linux就要敢于尝试，敢于实践。本文是自己在使用Ubuntu过程中的一些捣鼓，备忘一下。"
-category: Linux
-tags: [Ubuntu,GRUB]
+category: 技术
+tags: [Linux]
 ---
 ###__启动引导界面__	
 __1. 去除memtest选项__	
